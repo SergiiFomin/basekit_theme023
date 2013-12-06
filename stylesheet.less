@@ -1272,6 +1272,15 @@ div[id$="news"] {
       list-style: none;
       margin: 0 1% 2%;
       width: 23%;
+      span{
+        background: fade(@color-swatch3, 80%);
+        text-align: left;
+        &.title{
+          font-weight: bold;
+          color: @dark;
+        }
+        &.description{}
+      }
     }
   }
 }
@@ -1294,6 +1303,14 @@ div[id$="team"] {
       list-style: none;
       margin: 0 1% 2%;
       width: 23%;
+      span{
+        text-align: left;
+        &.title{
+          font-weight: bold;
+          color: @dark;
+        }
+        &.description{}
+      }
     }
   }
 }
