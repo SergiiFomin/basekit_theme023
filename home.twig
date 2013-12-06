@@ -1,0 +1,143 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">    
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+                            <div class="row">
+                                <article class="span4">
+                                    {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                                <article class="span8 right">
+                                    {{widget('content', 'content', {content: '<ul class="toplist"><li><a href="#">Register</a></li><li>or</li><li><a href="#">Log in</a></li></ul>', lines: 'all'})|raw}}
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="navigation">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">                        
+                        {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="showcase">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+
+                        {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'crop':1, 'transSpeed': '1000', 'transType': 'fade', 'showDescription': true, 'showTitle': true, 'showButtons': false, 'showBullets': true, 'allowPause': false, 'allowLoop': true, 'images':[{'imageHeight':'494', 'imageWidth':'1170', 'url':asset('/images/slider/slide-1.jpg'), 'title':'Excepteur sint occaecat', 'description': 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor cillum dolore eu fugiat nulla pariatu'}, {'imageHeight':'494','imageWidth':'1170', 'url':asset('/images/slider/slide-2.jpg'), 'title':'Dolore magna aliqua', 'description': 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor cillum dolore eu fugiat nulla pariatu'}, {'imageHeight':'494', 'imageWidth':'1170', 'url':asset('/images/slider/slide-3.jpg'), 'title':'Laboris nisi ut aliquip', 'description': 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor cillum dolore eu fugiat nulla pariatu'}, {'imageHeight':'494', 'imageWidth':'1170', 'url':asset('/images/slider/slide-4.jpg'), 'title':'Commodo consequat', 'description': 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor cillum dolore eu fugiat nulla pariatu'}]})|raw}}
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="maintop">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+
+                        {{widget('content', 'title1', {content: '<h2>Latest News</h2>', lines: 'all'})|raw}}
+                        {{widget('gallery', 'news', 
+                            {'showDescription': true,
+                            'showTitle': true,
+                            'images':
+                            [
+                            {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/news/img1.jpg'), 'title':'Lorem ipsum dolor sit...', 'description': 'Feb 02, 2014'},
+                            {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/news/img2.jpg'), 'title':'Excepteur sint...', 'description': 'Feb 02, 2014'},
+                            {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/news/img3.jpg'), 'title':'Ooccaecat cupidata...', 'description': 'Feb 02, 2014'},
+                            {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/news/img4.jpg'), 'title':'Ipsum dolor sit...', 'description': 'Feb 02, 2014'}
+                            ]
+                        })|raw}}
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!--content-->
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                    <div class="row">
+                        <article class="span4">
+                            {{widget('content', 'titel2', {content: '<h2>title</h2>', lines: 'all'})|raw}}
+                            {{widget('content', 'text1', {content: '<p class="type">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>', lines: 'all'})|raw}}
+                            {{widget('button', 'button1', {italic: false, text:'More', 'align':'widget-align-left'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        </article>
+                        <article class="span4">
+                            {{widget('content', 'titel3', {content: '<h2>title</h2>', lines: 'all'})|raw}}
+                            <figure class="fleft">{{widget('image', 'image1', { 'src': asset('images/page1-img1.jpg'), 'imageWidth': '110px'})|raw}}</figure>
+                            <div class="overflow">
+                                {{widget('content', 'text2', {content: '<p class="type">Lorem ipsum dolor sit amet</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor</p>', lines: 'all'})|raw}}
+                            </div>
+                            <div class="clear"></div>
+                            <figure class="fleft">{{widget('image', 'image2', { 'src': asset('images/page1-img2.jpg'), 'imageWidth': '110px'})|raw}}</figure>
+                            <div class="overflow">
+                                {{widget('content', 'text2', {content: '<p class="type">Excepteur sint</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor</p>', lines: 'all'})|raw}}
+                            </div>
+                            <div class="clear"></div>
+                            <figure class="fleft">{{widget('image', 'image3', { 'src': asset('images/page1-img3.jpg'), 'imageWidth': '110px'})|raw}}</figure>
+                            <div class="overflow">
+                                {{widget('content', 'text2', {content: '<p class="type">Cupidatat non proident</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor</p>', lines: 'all'})|raw}}
+                            </div>
+                            <div class="clear"></div>
+                            {{widget('button', 'button2', {italic: false, text:'See all', 'align':'widget-align-left'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        </article>
+                        <article class="span4">
+                            {{widget('content', 'titel4', {content: '<h2>title</h2>', lines: 'all'})|raw}}
+                            {{widget('gallery', 'photo', 
+                                {'showDescription': true,
+                                'showTitle': true,
+                                'images':
+                                [
+                                {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/photo/img1.jpg'), 'title':'Lorem ipsum dolor sit...', 'description': 'Feb 02, 2014'},
+                                {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/photo/img2.jpg'), 'title':'Excepteur sint...', 'description': 'Feb 02, 2014'},
+                                {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/photo/img3.jpg'), 'title':'Ooccaecat cupidata...', 'description': 'Feb 02, 2014'},
+                                {'imageHeight':'531', 'imageWidth':'640', 'url':asset('/images/photo/img4.jpg'), 'title':'Ipsum dolor sit...', 'description': 'Feb 02, 2014'}
+                                ]
+                            })|raw}}
+                            {{widget('button', 'button3', {italic: false, text:'See all', 'align':'widget-align-left'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
+                        </article>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        <div class="indent">
+                            {{widget('companyname', 'companyname', {"business": "Kit Car Building"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy Copyright 2014. All rights reserved'})|raw}}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}
