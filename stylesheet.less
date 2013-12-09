@@ -1278,10 +1278,10 @@ div[id$="news"] {
         &.title{
           font-weight: bold;
           color: @dark;
-          padding: 0 20px;
+          padding: 10px 20px 0;
         }
         &.description{
-          padding: 0 20px;
+          padding: 0 20px 10px;
         }
       }
     }
@@ -1586,6 +1586,18 @@ ul.item-list{
         position: absolute;
         right: 0;
         top: -41px;
+      }
+    }
+  }
+
+  div[id$="news"],
+  div.gallery,
+  div[id$="photo"],
+  div[id$="team"] {
+    ul.gallery-widget{
+      li{
+        width: 0%;
+        margin: 0 0 2%;
       }
     }
   }
