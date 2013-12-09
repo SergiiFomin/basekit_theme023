@@ -1435,7 +1435,7 @@ ul.item-list{
     ul {
       display: none;
       width: 100%;
-      margin: 2em 0;
+      margin: 0 0;
       background-color: @color-swatch7;
       li {
         display: block;
@@ -1482,6 +1482,7 @@ ul.item-list{
       width: 100%;
       position: absolute;
       top: 0px;
+      outline: none;
       &:after {
         content:"";
         background: image('/images/nav-icon.png') no-repeat;
@@ -1501,6 +1502,17 @@ ul.item-list{
   .ftr .fleft{
     float: left;
     margin-right: 20px;
+  }
+  div[id$="news"],
+  div.gallery,
+  div[id$="photo"],
+  div[id$="team"] {
+    ul.gallery-widget{
+      li{
+        width: 48%;
+        margin-left: 1%;
+      }
+    }
   }
 
 }
